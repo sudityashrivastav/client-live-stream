@@ -18,7 +18,9 @@ function baseFunction() {
     const videoSource = videoElement.getElementsByTagName("source")[0].src;
 
     // Object to hold Plyr options
-    const plyrOptions = {};
+    const plyrOptions = {
+        autoplay: true
+    };
 
     // Check if HLS is supported
     if (Hls.isSupported()) {
