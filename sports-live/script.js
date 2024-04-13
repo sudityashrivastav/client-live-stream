@@ -6,7 +6,7 @@ function baseFunction() {
 
     const streamURL = searchParams.get("cid")
     if (streamURL) {
-        mainVideoSRC.src = "https://proxy.scoreswift.in/m3u8-proxy?cid="+ streamURL
+        mainVideoSRC.src = "https://sports.hr08bets.in/m3u8-proxy?cid="+ streamURL
     } else {
         document.body.innerHTML = "cid is missing"
         return
