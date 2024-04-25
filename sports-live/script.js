@@ -1,14 +1,34 @@
 
-function baseFunction() {
+async function getCID(eventId) {
+
+    const res = await fetch(`http://46.101.91.237:8085/api/live-stream-source?eventid=${eventId}`)
+    const data = await res.json()
+
+    if (data.eid) {
+        return data.eid
+    }
+    alert("invalid event id")
+}
+
+
+async function baseFunction() {
     const mainVideoSRC = document.getElementById("main-video-source")
 
     const searchParams = new URLSearchParams(window.location.search);
 
-    const streamURL = searchParams.get("cid")
+    const myeid = searchParams.get("eventid")
+
+    if (!myeid) {
+        alert("eventid missing")
+        return
+    }
+
+    const streamURL = await getCID(myeid)
+
     if (streamURL) {
         mainVideoSRC.src = "https://sports.hr08bets.in/m3u8-proxy?cid="+ streamURL
     } else {
-        document.body.innerHTML = "cid is missing"
+        document.body.innerHTML = "invalid event id"
         return
     }
     // Get the video element
