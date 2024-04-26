@@ -128,4 +128,11 @@ html {
 
 body{
     color: aliceblue;
+    display: grid;  
+    place-items: center;
+}
+
+svg{
+    height: 110px;
+    width: 110px;
 }
