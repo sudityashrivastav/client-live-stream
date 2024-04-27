@@ -1,43 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="frame-ancestors">
-    <title>Live Casino</title>
+    <title>Casino Live</title>
 </head>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
+<body style="margin:0;padding:0">
+    <div id="playerDiv"
+        style="width: 100%; height: 100%; overflow: hidden; position: relative; background-color: black;">
 
-    body{
-        background-color: black;
-    }
+        <video id="h5live-playerDiv" autoplay="" playsinline="" webkit-playsinline="" muted=""
+            style="width: 100%; height: 100%; position: absolute; object-fit: contain;"></video>
 
-    iframe {
-        width: 100vw;
-        height: 100vh;
-    }
-</style>
 
-<body>
-    <iframe id="myFrame"></iframe>
+    </div>
+    <script type="text/javascript">
+        var streamData = "Ocb+qZgEr1h9r73a9ke3humt911Jfwtthg65cmW3RwyfuAv6ZO0idRkHlxxPC8pRNdm79dZr7VrmLZd7ksW2s2Dhv9H+z4tW3CcEhIOXit1hWIgRmn0Rv83cOwMkEnzZtm7V8h55WLWpVVpEDtiKY4soOzm61HdZF0CqnSM/CbGksqRCenzd5nIGlseUqvbu+zitPVjJgi5IqCYjJ329MrXguwg5tHSWD3vPxPRDJYaaEQtXC0PZxHtPlUfklA+7XZtM6/t3YKKi0eNQWNnwaSin4pSadLqZMC6QB9//cmQ=##@##98cbd68ff9163602##@##d638dac9ccef060f72e369d2fa117f05";
+    </script>
+    <script
+        type="text/javascript">document.addEventListener('gesturestart', function (e) { e.preventDefault(); });</script>
+    <script src="/encrypt.js"></script>
+    <script src="/common.js"></script>
+    <script src="/player_.js?id=updatedserverchange"></script>
+    <script src="/nmediaplayer_.js?id=updatedforlastforgameios"></script>
+
+
 </body>
-
-<script>
-    const myFrame = document.getElementById("myFrame")
-    const searchParams = new URLSearchParams(window.location.search);
-    const streamURL = searchParams.get("gameType")
-
-    if (streamURL) {
-        myFrame.src = "https://player.7777exch.com/?id="+streamURL
-    } else{
-        alert("gameType missing")
-    }
-</script>
 
 </html>
