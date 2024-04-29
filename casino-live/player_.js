@@ -4,12 +4,12 @@ var wsid = url.searchParams.get("id");
 var socketServerOne = ["Queen", "War", "2020Cricket", "1Card1Day", "1Card2020", "BollywoodTable", "Cricket5 Video", "NoteNum", "RaceTo17", "3CardJ", "32CardB", "AAA", "BaccaratB", "LuckyA", "LuckyB", "Poker1Day", "32CardA", "BaccaratA", "Poker6Player"];
 var socketServerTwo = ["Poker20", "CMeter", "AndarBaharA", "AndarBaharB", "DT20", "DT20B", "DT6OneDay", "DTL", "Muflis", "T20", "TeenPatti1Day", "TeenPattiTest", "OpenTeenPatti", "Race20", "SuperOver", "TeenPatti2", "InstantWorli", "WorliMatka"];
 
-var socketAddress = 'ws://46.101.91.237:10000/';
+var socketAddress = 'wss://casino-p.hr08bets.in/';
 
 if (wsid == "Trio")
     window.location.href = "/casino-live?id=Trio";
 else if (socketServerTwo.indexOf(wsid) != -1) {
-    socketAddress = 'ws://46.101.91.237:10000/'
+    socketAddress = 'wss://casino-p.hr08bets.in/'
 }
 
 !function(e) {
