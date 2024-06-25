@@ -52,7 +52,8 @@ const checkAuth = (req, res, next) => {
             next()
         }
         else {
-            console.log(JSON.stringify(error))
+            // console.log(JSON.stringify(error))
+            console.log("stream stealer ----->", domain, "\n");
             res.status(401).send('not allowed');
         }
 
