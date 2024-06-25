@@ -4,7 +4,7 @@ const cors = require('cors');
 const connectToDB = require('./db/connectToDB');
 
 const app = express();
-const port = 8882;
+const port = 10001;
 
 const checkAuth = (req, res, next) => {
     return async (req, res, next) => {
