@@ -25,10 +25,10 @@ const checkAuth = (req, res, next) => {
             .from('users')
             .select().eq("domain", domain)
             .single();
-
+            
+            console.log(streamType);
         if (data) {
 
-            console.log(streamType);
             if (streamType === "/casino-live/") {
 
                 for (let key in data.a_casino_stream) {
@@ -37,7 +37,7 @@ const checkAuth = (req, res, next) => {
                         return next();
                     }
                 }
-            } else if (streamType === "/sports-stream-live/") {
+            } else {
 
                 // ALL LOGIC FOR SPORTS STREAM
                 for (let key in data.a_casino_stream) {
