@@ -31,19 +31,19 @@ const checkAuth = (req, res, next) => {
             console.log(streamType);
             if (streamType === "/casino-live/") {
 
-                console.log(data);
-
                 for (let key in data.a_casino_stream) {
                     console.log(userCasinoID, data.a_casino_stream[key])
                     if (data.a_casino_stream[key] == userCasinoID) {
                         return next();
                     }
                 }
-            } else if (streamType === "/sports-stream-live") {
+            } else if (streamType === "/sports-stream-live/") {
 
                 // ALL LOGIC FOR SPORTS STREAM
-                if (true) {
-                    return next();
+                for (let key in data.a_casino_stream) {
+                    if (data.a_casino_stream[key] === "Allow Sport Stream") {
+                        return next();
+                    }
                 }
             }
             res.status(401).send('not allowed');
